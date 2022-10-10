@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,9 +21,19 @@ public class test03 {
 
         System.out.println("arrayList = " + arrayList);
 
-        List<Book> bookList = arrayList.stream().sorted(Comparator.comparing(Book::getPrice)).collect(Collectors.toList());
+        // .reversed()
+        List<Book> bookList = arrayList.stream().sorted(Comparator.comparing(Book::getPrice).reversed()).collect(Collectors.toList());
+
 
         System.out.println("bookList = " + bookList);
+
+        arrayList.sort(new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                return o2.getPrice() - o1.getPrice();
+            }
+        });
+        System.out.println("arrayList = " + arrayList);
 
     }
 }

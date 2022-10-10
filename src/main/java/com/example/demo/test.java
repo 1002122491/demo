@@ -1,30 +1,99 @@
 package com.example.demo;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
-/**
- * @author ShaoCong Lu
- * @date 2022/9/30 15:32
- */
-public class test {
-    public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,2,2,4,3,6,7,9,11,22,3,4));
-        //随机对象
-        Random random = new Random();
-        int size = list.size();
-        Set<Integer> totals = new HashSet<Integer>();
-        ArrayList<Integer> resultList = new ArrayList<>();
-        while (totals.size() < 3) {//获取3个
-            //随机再集合里取出元素，添加到新哈希集合
-            totals.add((int) list.get(random.nextInt(size)));
-        }
-        for (Integer total : totals) {
-            int next =  total;
-            resultList.add(next);
-        }
-        for (Integer integer : resultList) {
-            System.out.println("integer = " + integer);
-        }
+class Test {
+
+    public static void union() {
+
+        List<Object> list1 = new ArrayList();
+        list1.add("A");
+        list1.add("B");
+        list1.add("C");
+
+        List<Object> list2 = new ArrayList();
+        list2.add("B");
+        list2.add("C");
+        list2.add("D");
+
+        //求出并集
+        list1.addAll(list2);
+        System.out.println(list1);
+
     }
 
+    /**
+     * Description: 交集
+     *
+     * @return
+     * @version V1.0 2017/4/7 13:09 by 石冬冬-Heil Hilter(dd.shi02@zuche.com)
+     */
+
+    public static void intersection() {
+
+        List list1 = new ArrayList() {{
+
+            add("A");
+
+            add("B");
+
+            add("C");
+
+        }};
+
+        List list2 = new ArrayList() {{
+
+            add("C");
+
+            add("D");
+
+            add("B");
+
+        }};
+
+//求出交集
+
+        list1.retainAll(list2);
+
+        System.out.println(list1);
+
+    }
+
+    /**
+     * Description: 差集
+     *
+     * @return
+     * @version V1.0 2017/4/7 13:09 by 石冬冬-Heil Hilter(dd.shi02@zuche.com)
+     */
+
+    public static void diff() {
+
+        List list1 = new ArrayList() {{
+
+            add("A");
+
+            add("B");
+
+            add("C");
+
+        }};
+
+        List list2 = new ArrayList() {{
+
+            add("C");
+
+            add("D");
+
+            add("B");
+
+        }};
+
+//求出差集
+
+        list1.removeAll(list2);
+
+        System.out.println(list1);
+
+    }
 }
