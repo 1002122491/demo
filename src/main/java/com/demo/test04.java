@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.demo;
 
 import org.springframework.beans.BeanUtils;
 
