@@ -50,15 +50,12 @@
             </plugin>
 
 
-                <!-- 解决filters替换失败问题的插件 -->
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-
-
+            <!-- 解决filters替换失败问题的插件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
         </plugins>
-
     </build>
 
 
