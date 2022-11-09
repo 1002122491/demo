@@ -7,9 +7,9 @@ package com.demo;
 public class test05 {
     public static void main(String[] args) {
 
-        String pastDate = "2022-10-9";
-        String nowDate = "2022-10-12";
-        DateUtils.getDayBetween(pastDate,nowDate);
+       String name = "lsc";
+       int age = 18;
+        System.out.println(age + name);
     }
 
 }
