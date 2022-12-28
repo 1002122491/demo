@@ -35,5 +35,6 @@ public class DemoApplicationTest02 {
 
         Map<String, Integer> nameMap = test.DataFilteringNameMap(strings);
         System.out.println(nameMap);
+
     }
 }
